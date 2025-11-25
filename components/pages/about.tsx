@@ -13,6 +13,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import FounderGrid from "../FounderGrid";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -54,9 +55,9 @@ const About = () => {
   return (
     <div className="min-h-screen pt-16">
       {/* Hero Section */}
-      <section className="py-20 bg-[#eef2f2]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
+      {/* <section className="py-20 bg-[#eef2f2]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> */}
+          {/* <motion.div
             className="text-center mb-16"
             initial="hidden"
             animate="visible" // ✅ triggers immediately on mount
@@ -71,9 +72,9 @@ const About = () => {
               custom={0}
               className="font-montserrat font-bold text-5xl md:text-6xl text-[#376255] mb-6"
             >
-              About Mendiv
-            </motion.h1>
-            <motion.p
+              About Mendiv */}
+            {/* </motion.h1> */}
+            {/* <motion.p
               variants={fadeUp}
               custom={1}
               className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed"
@@ -82,14 +83,14 @@ const About = () => {
               therapeutic programmes, mindfulness practices, and innovative
               wellness experiences to help individuals refresh, heal, and
               rediscover balance in their everyday lives.
-            </motion.p>
-          </motion.div>
+            </motion.p> */}
+          {/* </motion.div>
         </div>
-      </section>
+      </section> */}
 
       {/* Story Section */}
       <section className="py-20 bg-background">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl grid grid-cols-2 mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="text-center mb-16"
             initial="hidden"
@@ -103,13 +104,13 @@ const About = () => {
             <motion.h2
               variants={fadeUp}
               custom={0}
-              className="font-montserrat font-bold text-4xl md:text-5xl text-[#376255] mb-6"
+              className="font-montserrat font-bold text-4xl md:text-7xl text-[#376255] mb-6"
             >
               Our Story
             </motion.h2>
           </motion.div>
 
-          <div className="space-y-8 text-lg text-gray-700 leading-relaxed">
+          <div className="space-y-2 text-lg text-gray-700 leading-relaxed">
             {[
               "Mendiv was founded with a simple belief: true well-being begins in the mind. In a world where stress, anxiety, and disconnection have become common, we envisioned a place where people could pause, reflect, and renew themselves.",
               "Our journey began by blending psychology, mindfulness, and creative therapies into carefully designed programmes. From relaxation pods to immersive workshops, Mendiv quickly grew into a holistic wellness destination that supports individuals at every stage of their mental health journey.",
@@ -130,6 +131,9 @@ const About = () => {
           </div>
         </div>
       </section>
+      <div>
+        <FounderGrid/>
+      </div>
 
       {/* Vision & Mission */}
       <section className="py-20 bg-background">
